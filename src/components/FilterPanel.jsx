@@ -20,7 +20,10 @@ const FilterPanel = () => {
       <div className="filter-panel-wrapper">
         <Stack>
           {currentFilters.map((filter) => (
-            <Badge key={filter} variant="clearable">
+            <Badge
+              key={filter}
+              variant="clearable"
+              onClick={() => dispatch(removeFilter(filter))}>
               {filter}
             </Badge>
           ))}
