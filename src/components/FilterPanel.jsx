@@ -9,6 +9,10 @@ import { selectFilters } from "store/filters/filterSelectors";
 const FilterPanel = () => {
   const currentFilters = useSelector(selectFilters);
 
+  if (currentFilters.length === 0) {
+    return null;
+  }
+
   return (
     <Card className="filter-panel">
       <div className="filter-panel-wrapper">
